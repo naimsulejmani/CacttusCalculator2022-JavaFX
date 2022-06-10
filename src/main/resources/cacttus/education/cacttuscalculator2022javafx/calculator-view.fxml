@@ -12,19 +12,24 @@
           prefHeight="400.0" prefWidth="600.0">
 
     <TextField fx:id="txtResult" GridPane.rowIndex="0" GridPane.columnIndex="0"
-               GridPane.columnSpan="4"/>
+               GridPane.columnSpan="4" text="0" alignment="CENTER_RIGHT"
+               style="-fx-background-color: blue; -fx-fill: white;"
+
+    />
 
     <!-- Rreshti 1 -->
     <Button fx:id="btnClear" GridPane.rowIndex="1" GridPane.columnIndex="0" text="Clear"
             prefHeight="75" prefWidth="75"
-            onAction="#thirremPlease"
+
     />
     <Button fx:id="btnPower" GridPane.rowIndex="1" GridPane.columnIndex="1" text="x^2"
             prefHeight="75" prefWidth="75"/>
     <Button fx:id="btnSqrt" GridPane.rowIndex="1" GridPane.columnIndex="2" text="sqrt"
             prefHeight="75" prefWidth="75"/>
     <Button fx:id="btnDivide" GridPane.rowIndex="1" GridPane.columnIndex="3" text="/"
-            prefHeight="75" prefWidth="75"/>
+            prefHeight="75" prefWidth="75"
+            onAction="#onOperandClick"
+    />
 
 
     <!-- Rreshti 2 -->
@@ -36,7 +41,9 @@
     <Button fx:id="btn9" GridPane.rowIndex="2" GridPane.columnIndex="2" text="9"
             prefHeight="75" prefWidth="75" onAction="#btnNumberClick"/>
     <Button fx:id="btnMultiply" GridPane.rowIndex="2" GridPane.columnIndex="3" text="x"
-            prefHeight="75" prefWidth="75"/>
+            prefHeight="75" prefWidth="75"
+            onAction="#onOperandClick"
+    />
 
 
     <!-- Rreshti 3 -->
@@ -48,7 +55,9 @@
     <Button fx:id="btn6" GridPane.rowIndex="3" GridPane.columnIndex="2" text="6"
             prefHeight="75" prefWidth="75" onAction="#btnNumberClick"/>
     <Button fx:id="btnMinus" GridPane.rowIndex="3" GridPane.columnIndex="3" text="-"
-            prefHeight="75" prefWidth="75"/>
+            prefHeight="75" prefWidth="75"
+            onAction="#onOperandClick"
+    />
 
     <!-- Rreshti 4 -->
     <Button fx:id="btn1" GridPane.rowIndex="4" GridPane.columnIndex="0" text="1"
@@ -64,7 +73,9 @@
             onAction="#btnNumberClick"
     />
     <Button fx:id="btnPlus" GridPane.rowIndex="4" GridPane.columnIndex="3" text="+"
-            prefHeight="75" prefWidth="75"/>
+            prefHeight="75" prefWidth="75"
+            onAction="#onOperandClick"
+    />
 
     <!-- Rreshti 5 -->
     <Button fx:id="btnPlusMinus" GridPane.rowIndex="5" GridPane.columnIndex="0" text="+/-"
@@ -75,7 +86,7 @@
             onAction="#btnNumberClick"
     />
     <Button fx:id="btnDot" GridPane.rowIndex="5" GridPane.columnIndex="2" text="."
-            prefHeight="75" prefWidth="75"/>
+            prefHeight="75" prefWidth="75" onAction="#dotClick"/>
     <Button fx:id="btnEqual" GridPane.rowIndex="5" GridPane.columnIndex="3" text="="
             prefHeight="75" prefWidth="75"/>
 
